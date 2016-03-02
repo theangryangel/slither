@@ -21,6 +21,7 @@ module Slither
 	    end
 	    if @definition.options[:trailing_blank_line]
 	    	@builder << ""
+	    end
 	    @builder.join(@definition.options[:new_line] || "\n")
 		end
 		
