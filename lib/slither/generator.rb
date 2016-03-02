@@ -19,6 +19,8 @@ module Slither
   	      raise(Slither::RequiredSectionEmptyError, "Required section '#{section.name}' was empty.") unless section.optional
 	      end
 	    end
+	    if @definition.options[:trailing_blank_line]
+	    	@builder << ""
 	    @builder.join(@definition.options[:new_line] || "\n")
 		end
 		
